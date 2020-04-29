@@ -1,0 +1,29 @@
+server:
+  port: 8080
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+spring:
+  datasource:
+    name: miaosha
+    url: jdbc:mysql://localhost/miaosha
+    username: root
+    password: 123
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+  mvc:
+    throw-exception-if-no-handler-found: true
+  resources:
+    add-mappings: false
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 10
+    jedis:
+      pool:
+        max-active: 50
+        min-idle: 20
+mq:
+  nameserver:
+    addr: 192.168.46.132:9876
+  topicname: stock
+
